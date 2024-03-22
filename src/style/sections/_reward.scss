@@ -1,0 +1,248 @@
+.reward {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 100px;
+    @media (max-width: $phone-wide) {
+      gap: 60px;
+    }
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+      font-size: 20px;
+      @include l-h(140%);
+      @media (max-width: $phone-wide) {
+        font-size: 16px;
+      }
+    }
+
+    span {
+      color: $color-green;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    @media (max-width: $desktop) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: 340px) {
+      gap: 24px 16px;
+    }
+
+    &.in-view {
+      .reward-block {
+        @for $i from 1 through 20 {
+          &:nth-of-type(#{$i}n) {
+            animation: slideInUp 1s $i * .2s ease-in-out forwards;
+          }
+        }
+      }
+    }
+
+    .reward-block {
+      width: 25%;
+      display: inline-flex;
+      gap: 24px;
+      flex-flow: column;
+      align-items: center;
+      padding: 80px 40px 40px;
+      border-radius: 24px;
+      border: 1px solid #38373f;
+      position: relative;
+      transform: translate3d(0, 120px, 0);
+      opacity: 0;
+      @media (max-width: $desktop-wide) {
+        padding: 80px 20px 40px;
+      }
+      @media (max-width: $desktop) {
+        width: calc(50% - 12px);
+        padding: 100px 40px 40px;
+      }
+      @media (max-width: $ipad) {
+        padding: 100px 40px 40px;
+      }
+      @media (max-width: $phone-wide) {
+        padding: 60px 12px 24px;
+        gap: 8px;
+      }
+      @media (max-width: 340px) {
+        width: calc(50% - 8px);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 23px;
+        background: linear-gradient(180deg, rgba(29, 27, 37, .6), rgba(29, 27, 37, .75), rgba(29, 27, 37, .9), rgba(29, 27, 37, 1));
+        z-index: 2;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        z-index: 1;
+      }
+
+      &.gold {
+        &::after {
+          background-color: #FFDA41;
+        }
+      }
+
+      &.silver {
+        &::after {
+          background-color: #D8D8D8;
+        }
+      }
+
+      &.bronze {
+        &::after {
+          background-color: #865837;
+        }
+      }
+
+      &.grey {
+        &::after {
+          background-color: #1D1B25;
+        }
+      }
+
+      &_icon {
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+        z-index: 3;
+        @media (max-width: $desktop) {
+          top: -60px;
+        }
+        @media (max-width: $phone-wide) {
+          width: 141px;
+          height: 140px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &_title {
+        position: relative;
+        z-index: 3;
+        font-size: 20px;
+        @include l-h(140%);
+        @include f-w(600);
+        text-align: center;
+        @media (max-width: $phone-wide) {
+          font-size: 14px;
+        }
+      }
+
+      &_info {
+        font-size: 16px;
+        text-align: center;
+        @include l-h(140%);
+        position: relative;
+        z-index: 3;
+        @media (max-width: $phone-wide) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &.crypto-bloom {
+    .reward {
+      &__head span {
+        color: $color-yellow_2;
+        font-weight: 600;
+        @include fs-32();
+      }
+
+      &__content {
+        @media (max-width: $phone-wide) {
+          gap: 12px;
+        }
+
+        .reward-block {
+          padding-top: 104px;
+          @media (max-width: $desktop) {
+            padding-top: 128px;
+          }
+          @media (max-width: $phone-wide) {
+            width: calc(50% - 6px);
+            padding-top: 80px;
+          }
+
+          &::before {
+            content: none;
+          }
+
+          &.gold {
+            &::after {
+              background-color: $bg-yellow;
+            }
+          }
+
+          &.silver {
+            &::after {
+              background-color: $bg-gray;
+            }
+          }
+
+          &.bronze {
+            &::after {
+              background-color: $bg-bronze;
+            }
+          }
+
+          &.grey {
+            &::after {
+              background-color: $bg-gray_2;
+            }
+          }
+
+          &_title {
+            color: $color-black;
+            font-weight: 800;
+          }
+
+          &_info {
+            color: $color-black;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

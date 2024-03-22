@@ -1,0 +1,30 @@
+h2, h1 {
+  @include fs-52();
+  @include f-w(600);
+  @include l-h();
+  color: $color-white;
+}
+
+h3 {
+  @include fs-40();
+  @include f-w(600);
+  @include l-h();
+  color: $color-white;
+  letter-spacing: .525px;
+}
+
+p {
+  @include fs-16();
+  @include f-w(400);
+  @include l-h(140%);
+  margin-top: 0;
+  margin-bottom: 14px;
+  
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: 600;
+}

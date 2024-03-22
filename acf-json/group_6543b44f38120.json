@@ -1,0 +1,69 @@
+{
+    "key": "group_6543b44f38120",
+    "title": "DeFi fields",
+    "fields": [
+        {
+            "key": "field_6543b44fcd06b",
+            "label": "APY",
+            "name": "apy_defi",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": 100,
+            "placeholder": "",
+            "step": "0.1",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_6543b4c2f6c67",
+            "label": "TVL",
+            "name": "dvl_defi",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "$",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "defi"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1701354604
+}

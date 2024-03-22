@@ -1,0 +1,118 @@
+body:not(.showfocus) .player a, body:not(.showfocus) .player button, body:not(.showfocus) .player li, body:not(.showfocus) .player span, body:not(.showfocus) .player svg {
+  margin-left: 30px !important;
+}
+
+.video-block {
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #2A2930;
+  width: 100%;
+  overflow: hidden;
+  background: $bg-black;
+  padding-bottom: 58%;
+  position: relative;
+  @media (max-width: $desktop) {
+    border-radius: 30px;
+  }
+  @media (max-width: $tablet) {
+    border-radius: 24px;
+    padding-bottom: 56%;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #2A2930;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $bg-green;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  &.load-iframe {
+    &::before {
+      top: -200%;
+      transition: top .5s 1s;
+    }
+  
+    &::after {
+      top: 120%;
+      opacity: 0;
+      animation: rotatePlay 1s linear alternate infinite;
+      transition: top .5s 1.5s, opacity .5s 1.5s;
+    }
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    z-index: 3;
+    @media (max-width: $desktop) {
+      border-radius: 30px;
+    }
+    @media (max-width: $tablet) {
+      border-radius: 24px;
+    }
+  }
+  
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 58px;
+    height: 64px;
+    pointer-events: none;
+    z-index: 3;
+    background-image: url("./../img/icon/icon__play.svg");
+    background-size: cover;
+    @media (max-width: $phone-wide) {
+      width: 40px;
+      height: 46px;
+    }
+    @media (max-width: $phone) {
+      width: 32px;
+      height: 36px;
+    }
+  }
+  
+  iframe {
+    border: 20px solid $bg-black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: $tablet) {
+      border: 0;
+    }
+  }
+}

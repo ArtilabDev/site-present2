@@ -1,0 +1,92 @@
+.content-block {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__inner {
+    display: flex;
+    flex-flow: column;
+    gap: 44px;
+    width: 800px;
+    margin: 0 auto;
+    @media (max-width: $ipad) {
+      width: 100%;
+      gap: 32px;
+    }
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+
+    span {
+      @include fs-20();
+      @include f-w(500);
+      @include l-h(140%);
+      color: $color-green;
+    }
+  }
+
+  &__core {
+    @include fs-16();
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+
+    &-anchor, &-title {
+      @include fs-20();
+      @include f-w(600);
+      @include l-h(140%);
+      text-transform: uppercase;
+    }
+
+    h2 {
+      @include fs-20();
+    }
+
+    h3 {
+      @include fs-18();
+    }
+
+    h4, h5, h6 {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+
+    a {
+      color: $color-green;
+      text-decoration: underline;
+    }
+
+    ol {
+      @extend .d-ol;
+    }
+
+    ul {
+      @extend .d-ul;
+      margin: 0;
+    }
+
+    &.anchor-links {
+      ul {
+        li {
+          &::before {
+            background: $bg-green;
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

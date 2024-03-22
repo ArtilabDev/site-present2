@@ -1,0 +1,44 @@
+.page-about {
+
+  .about {
+    &__content {
+      width: 450px;
+      @media (max-width: $desktop-wide) {
+        width: 400px;
+      }
+      @media (max-width: $ipad) {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &__video {
+      width: 550px;
+      height: 577px;
+      right: 50px;
+      @media (max-width: $wide-screen) {
+        width: 524px;
+        height: 550px;
+      }
+      @media (max-width: $desktop-wide) {
+        width: 400px;
+        height: 419px;
+        right: 20px;
+      }
+      @media (max-width: $ipad) {
+        width: auto;
+        height: 577px;
+        right: 0;
+      }
+      @media (max-width: $tablet) {
+        height: 440px;
+      }
+      @media (max-width: $phone-wide) {
+        height: 360px;
+      }
+      @media (max-width: $phone) {
+        height: 300px;
+      }
+    }
+  }
+}

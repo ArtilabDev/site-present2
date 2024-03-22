@@ -1,0 +1,12 @@
+{
+	"name": "blockFeature",
+	"title": "Block feature",
+	"description": "Block feature",
+	"category": "dollet",
+	"icon": "lightbulb",
+	"keywords": ["Block feature", "Block feature"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/feature/feature.php"
+	}
+}

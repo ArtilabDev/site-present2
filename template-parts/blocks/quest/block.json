@@ -1,0 +1,12 @@
+{
+	"name": "blockQuest",
+	"title": "Block quest",
+	"description": "Block quest",
+	"category": "dollet",
+	"icon": "location-alt",
+	"keywords": ["Block quest", "Block quest"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/quest/quest.php"
+	}
+}

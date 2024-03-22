@@ -1,0 +1,12 @@
+{
+	"name": "blockTrendPost",
+	"title": "Block trend",
+	"description": "Block trend",
+	"category": "dollet",
+	"icon": "heart",
+	"keywords": ["Block trend", "trend-post"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/trend-post/trend-post.php"
+	}
+}

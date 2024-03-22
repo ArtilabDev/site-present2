@@ -1,0 +1,187 @@
+@mixin ps100($w: 100%, $h: 100%) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: $w;
+  height: $h;
+}
+
+@mixin b-top() {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin b-bot() {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin content() {
+  content: '';
+  position: absolute;
+}
+
+// font-weight
+@mixin f-w($fw: 400) {
+  font-weight: $fw;
+}
+
+// line-height
+@mixin l-h($lh: 100%) {
+  line-height: $lh;
+}
+
+@mixin transition($type: all, $time: .5s, $delay: false, $delayTime: 0s) {
+  @if $delay {
+    transition: $type $time $delayTime;
+  } @else {
+    transition: $type $time;
+  }
+}
+
+@mixin block-margin-top-bot($margin: 120px) {
+  margin: $margin 0;
+  @media (max-width: $desktop-wide) {
+    margin: 100px 0;
+  }
+  @media (max-width: $ipad) {
+    margin: 120px 0;
+  }
+  @media (max-width: $tablet) {
+    margin: 80px 0;
+  }
+  @media (max-width: $phone-wide) {
+    margin: 60px 0;
+  }
+}
+
+@mixin fs-16($font-size: 16px) {
+  font-size: $font-size;
+  @media (max-width: $desktop-wide) {
+    font-size: 15px;
+  }
+  @media (max-width: $desktop) {
+    font-size: 14px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 16px;
+  }
+}
+
+@mixin fs-20($font-size: 20px) {
+  font-size: $font-size;
+  @media (max-width: $desktop-wide) {
+    font-size: 19px;
+  }
+  @media (max-width: $desktop) {
+    font-size: 18px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 20px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 18px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 16px;
+  }
+}
+
+@mixin fs-18($font-size: 18px) {
+  font-size: $font-size;
+  @media (max-width: $desktop-wide) {
+    font-size: 17px;
+  }
+  @media (max-width: $desktop) {
+    font-size: 16px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 18px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 17px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 16px;
+  }
+}
+
+@mixin fs-52($font-size: 52px) {
+  font-size: $font-size;
+  @media (max-width: $wide-screen) {
+    font-size: 48px;
+  }
+  @media (max-width: $desktop-wide) {
+    font-size: 44px;
+  }
+  @media (max-width: $desktop) {
+    font-size: 42px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 52px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 40px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 32px;
+  }
+}
+
+@mixin fs-40($font-size: 40px) {
+  font-size: $font-size;
+  @media (max-width: $wide-screen) {
+    font-size: 38px;
+  }
+  @media (max-width: $desktop-wide) {
+    font-size: 34px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 40px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 32px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 28px;
+  }
+  @media (max-width: $phone) {
+    font-size: 24px;
+  }
+}
+
+@mixin fs-40-title($font-size: 40px) {
+  font-size: $font-size;
+  @media (max-width: $wide-screen) {
+    font-size: 38px;
+  }
+  @media (max-width: $desktop-wide) {
+    font-size: 36px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 32px;
+  }
+}
+
+@mixin fs-32($font-size: 32px) {
+  font-size: $font-size;
+  @media (max-width: $desktop-wide) {
+    font-size: 30px;
+  }
+  @media (max-width: $desktop) {
+    font-size: 28px;
+  }
+  @media (max-width: $ipad) {
+    font-size: 32px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 28px;
+  }
+  @media (max-width: $phone-wide) {
+    font-size: 24px;
+  }
+}

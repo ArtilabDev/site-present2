@@ -1,0 +1,380 @@
+.defi {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__head {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 32px;
+    gap: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    @media (max-width: $phone-wide) {
+      gap: 24px;
+      padding-bottom: 24px;
+    }
+
+    a {
+      color: $color-green;
+      text-decoration: underline;
+    }
+
+    ul {
+      @extend .d-ul;
+    }
+
+    ol {
+      @extend .d-ol;
+    }
+
+    p {
+      width: 600px;
+      margin-bottom: 0;
+      @media (max-width: $ipad) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-flow: column;
+    padding-top: 32px;
+    @media (max-width: $phone-wide) {
+      padding-top: 24px;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    width: 100%;
+    @media (max-width: $phone-wide) {
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .select {
+      @media (max-width: $ipad) {
+        width: calc(50% - 12px);
+      }
+      @media (max-width: $phone-wide) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+
+    &.loading {
+      min-height: 100px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $bg-black;
+        opacity: .8;
+        z-index: 4;
+        border-radius: 0 0 32px 32px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/icon/loading.svg");
+        background-size: 60px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 5;
+      }
+
+    }
+
+    &-load-more {
+      padding: 24px 0 12px;
+      text-align: center;
+      @media (max-width: $phone-wide) {
+        width: 100%;
+      }
+
+      .button {
+        padding: 16px 32px;
+        @media (max-width: $phone-wide) {
+          width: 100%;
+        }
+
+        &.loading {
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $bg-black;
+            opacity: .8;
+            z-index: 4;
+            border-radius: 0 0 32px 32px;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/icon/loading.svg");
+            background-size: 40px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 5;
+          }
+
+        }
+      }
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding: 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(29, 27, 37, 0.60);
+      @media (max-width: $ipad) {
+        flex-wrap: wrap;
+        border-radius: 32px;
+        padding: 32px;
+        gap: 20px;
+      }
+      @media (max-width: $phone-wide) {
+        gap: 16px;
+        padding: 24px;
+      }
+
+      .block-part {
+        display: inline-flex;
+        @media (max-width: $ipad) {
+          width: 100%;
+        }
+
+        .block-name {
+          display: inline-flex;
+          align-items: center;
+          gap: 28px;
+          width: 300px;
+          @media (max-width: $ipad) {
+            width: 100%;
+            margin-bottom: 16px;
+          }
+
+          &_logo {
+            display: inline-flex;
+            align-items: center;
+            min-width: 96px;
+            position: relative;
+            @media (max-width: $desktop-wide) {
+              min-width: 84px;
+            }
+            @media (max-width: $ipad) {
+              max-width: 96px;
+              min-width: auto;
+            }
+
+            img {
+              width: 48px;
+              height: 48px;
+              display: none;
+              @media (max-width: $desktop-wide) {
+                width: 42px;
+                height: 42px;
+              }
+              @media (max-width: $ipad) {
+                width: 48px;
+                height: 48px;
+              }
+
+              &:nth-of-type(-n+1),
+              &:nth-of-type(-n+2) {
+                display: inline-block;
+              }
+
+              &:nth-of-type(n+2) {
+                margin-left: -12px;
+              }
+            }
+
+            .icon-plus {
+              position: absolute;
+              right: 0;
+              top: calc(50% - 12px);
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background-image: url("./../img/icon/icon-plus.svg");
+              background-size: cover;
+              @media (max-width: $ipad) {
+                right: -12px;
+              }
+            }
+          }
+
+          span {
+            color: $color-white;
+            font-size: 16px;
+            @include l-h();
+            @include f-w(700);
+          }
+        }
+
+        .block-type {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          width: 190px;
+          @media (max-width: $desktop-wide) {
+            width: 140px;
+          }
+          @media (max-width: $ipad) {
+            width: 100%;
+          }
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+
+          span {
+            color: $color-white;
+            @include fs-16();
+            @include l-h();
+            @include f-w();
+            opacity: .6;
+          }
+        }
+
+        .block-info {
+          display: flex;
+          flex-flow: column;
+          gap: 4px;
+          width: 190px;
+          position: relative;
+          @media (max-width: $desktop-wide) {
+            width: 140px;
+          }
+          @media (max-width: $ipad) {
+            flex-flow: nowrap;
+            width: 100%;
+            justify-content: space-between;
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 50%;
+              width: 100%;
+              height: 1px;
+              border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+            }
+          }
+
+          span {
+            position: relative;
+            color: #9e9da1;
+            @include fs-16();
+            @include l-h();
+            @include f-w();
+            z-index: 1;
+            @media (max-width: $ipad) {
+              background: rgba(29, 27, 37, 1);
+              padding-right: 15px;
+            }
+          }
+
+          strong {
+            position: relative;
+            color: $color-white;
+            @include fs-16();
+            @include l-h();
+            @include f-w(700);
+            z-index: 1;
+            @media (max-width: $ipad) {
+              background: rgba(29, 27, 37, 1);
+              padding-left: 15px;
+            }
+          }
+        }
+
+        .button {
+          padding: 16px 32px;
+          @media (max-width: $phone-wide) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+
+      li {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        width: 28px;
+        height: 28px;
+
+        &.hidden {
+          opacity: .4;
+          background: rgba(235, 255, 249, 0.08);
+          pointer-events: none;
+        }
+
+        &.active {
+          background: rgba(235, 255, 249, 0.08);
+          pointer-events: none;
+        }
+
+        a, span {
+          color: $color-white;
+          font-size: 14px;
+          @include l-h();
+          @include f-w(700);
+        }
+
+        //span {
+        //  pointer-events: none;
+        //}
+      }
+    }
+  }
+}

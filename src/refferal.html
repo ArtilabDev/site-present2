@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('components/_head.html')
+  @@include('components/_head-links.html')
+</head>
+
+<body>
+
+<div class="page-wrapper">
+  @@include('components/_header.html')
+
+  @@include('components/section/_ref-banner.html')
+  @@include('components/section/_quest.html')
+  @@include('components/section/_reward.html')
+  @@include('components/section/_participate.html')
+
+  <section id="crypto-gardens"></section>
+  <script src="https://widgets.claimr.io/claimr.min.js"
+          id="claimr-script"
+          data-addons="sup,fcm,smc,shc,clt,eup,slc"
+          data-organization="dollet"
+          data-campaign="crypto-garden"
+          data-autoresize="true"
+          data-container="crypto-gardens">
+  </script>
+
+  @@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

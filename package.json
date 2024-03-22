@@ -1,0 +1,36 @@
+{
+  "name": "dollet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp r_build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "gsap": "^3.12.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-mode": "^1.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "lottie-web": "^5.12.2",
+    "require-dir": "^1.2.0",
+    "sass": "^1.51.0",
+    "swiper": "^7.4.1"
+  },
+  "devDependencies": {
+    "gulp-clone": "^2.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-webp": "^4.0.1"
+  }
+}

@@ -1,0 +1,156 @@
+.quest {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 44px;
+    @media (max-width: $phone-wide) {
+      gap: 24px;
+    }
+  }
+
+  &-slider {
+    width: 100%;
+  }
+
+  &-slide {
+    width: 384px;
+    height: auto;
+    display: inline-flex;
+    flex-flow: column;
+    gap: 12px;
+    border-radius: 24px;
+    padding: 40px;
+    transform: translate3d(-120px, 0, 0);
+    opacity: 0;
+    @media (max-width: $desktop-wide) {
+      padding: 32px;
+    }
+    @media (max-width: $ipad) {
+      padding: 40px;
+    }
+    @media (max-width: $phone-wide) {
+      padding: 24px;
+      width: 300px;
+    }
+    @media (max-width: 340px) {
+      width: 260px;
+    }
+
+    &:nth-of-type(3n+1) {
+      background: linear-gradient(90deg, #6DFFD5 0%, #CD57FF 100%);
+    }
+    &:nth-of-type(3n+2) {
+      background: linear-gradient(90deg, #CD57FF 0%, #FFFCBE 100%);
+    }
+    &:nth-of-type(3n+3) {
+      background: linear-gradient(90deg, #FFFCBE 0%, #6DFFD5 100%);
+    }
+
+    .in-view & {
+      @for $i from 1 through 20 {
+        &:nth-of-type(#{$i}n) {
+          animation: slideInLeft 1s $i * .2s ease-in-out forwards;
+        }
+      }
+    }
+
+    &_icon {
+      height: 200px;
+      width: 100%;
+      text-align: center;
+      @media (max-width: $desktop-wide) {
+        height: 180px;
+      }
+      @media (max-width: $ipad) {
+        height: 200px;
+      }
+      @media (max-width: $phone-wide) {
+        height: 120px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    &_title {
+      @include fs-32();
+      @include l-h(100%);
+      @include f-w(900);
+      color: $color-black;
+      text-align: center;
+      @media (max-width: $phone-wide) {
+        font-size: 24px;
+      }
+    }
+
+    &_text {
+      text-align: center;
+      font-size: 20px;
+      @include l-h(140%);
+      color: $color-black;
+      @media (max-width: $phone-wide) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.crypto-bloom {
+    .quest {
+      &-slide {
+        padding-top: 50px;
+        @media (max-width: $desktop-wide) {
+          padding: 32px;
+        }
+        @media (max-width: $ipad) {
+          padding: 40px;
+        }
+        @media (max-width: $phone-wide) {
+          padding: 24px;
+          width: 300px;
+        }
+        @media (max-width: 340px) {
+          width: 260px;
+        }
+
+        &:nth-of-type(3n+1) {
+          background: $bg-pink
+        }
+
+        &:nth-of-type(3n+2) {
+          background: $bg-yellow
+        }
+
+        &:nth-of-type(3n+3) {
+          background: $bg-blue
+        }
+
+        &_icon {
+          height: 320px;
+          margin-bottom: 20px;
+          @media (max-width: $desktop-wide) {
+            height: 300px;
+          }
+          @media (max-width: $phone-wide) {
+            height: 280px;
+          }
+          @media (max-width: 340px) {
+            height: 250px;
+          }
+
+        }
+
+        &_text {
+          @include f-w(500);
+        }
+      }
+    }
+  }
+}

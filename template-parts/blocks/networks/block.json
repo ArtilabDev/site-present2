@@ -1,0 +1,12 @@
+{
+	"name": "blockNetworks",
+	"title": "Block networks",
+	"description": "Block networks",
+	"category": "dollet",
+	"icon": "admin-site-alt3",
+	"keywords": ["Block neyworks", "Block networks"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/networks/networks.php"
+	}
+}

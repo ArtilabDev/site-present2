@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('components/_head.html')
+  @@include('components/_head-links.html')
+</head>
+
+<body class="hideAll">
+
+<div class="page-wrapper no-banner">
+  @@include('components/_header.html')
+
+  <section class="sBlog">
+    <div class="container">
+      <div class="sBlog__wrap" data-scroll-body >
+
+        <div class="sBlog__sidebar" data-scroll-block>
+          <ul>
+            <li>
+              <a href="blog.html" class="sticky-cursor sticky-dot">
+                All articles
+              </a></li>
+            <li>
+              <a href="blog-category.html" class="sticky-cursor sticky-dot">
+                Crypto World
+              </a></li>
+            <li class="active">
+              <a href="blog-category.html" class="sticky-cursor sticky-dot">
+                Announcements
+              </a></li>
+            <li>
+              <a href="blog-category.html" class="sticky-cursor sticky-dot">
+                Finance
+              </a></li>
+            <li>
+              <a href="blog-category.html" class="sticky-cursor sticky-dot">
+                DeFi
+              </a></li>
+            <li>
+              <a href="blog-category.html" class="sticky-cursor sticky-dot">
+                Interesting
+              </a></li>
+          </ul>
+        </div>
+
+        <div class="sBlog__articles" data-scroll-content>
+          <div class="sBlog__articles-title">
+            <h2>Dollet Blog</h2>
+          </div>
+          <div class="sBlog__articles-wrap">
+
+            <div class="blog-card">
+              <a href="./article.html" class="blog-card_image sticky-cursor sticky-dot">
+                <img src="./img/f9b828dbeb6102e6509a2677a8fbb9fa.png" alt="">
+              </a>
+              <div class="blog-card_content">
+                <div class="card-tag tags">
+                  <ul>
+                    <li class="color-green"><a class="sticky-cursor" href="./blog-category.html">Announcements</a></li>
+                  </ul>
+                </div>
+                <div class="card-date">
+                  September 15, 2023
+                </div>
+                <a href="./article.html" class="card-text sticky-cursor sticky-dot">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </a>
+              </div>
+            </div>
+            <div class="blog-card">
+              <a href="./article.html" class="blog-card_image sticky-cursor sticky-dot">
+                <img src="./img/f9b828dbeb6102e6509a2677a8fbb9fa.png" alt="">
+              </a>
+              <div class="blog-card_content">
+                <div class="card-tag tags">
+                  <ul>
+                    <li class="color-green"><a class="sticky-cursor" href="./blog-category.html">Announcements</a></li>
+                  </ul>
+                </div>
+                <div class="card-date">
+                  September 15, 2023
+                </div>
+                <a href="./article.html" class="card-text sticky-cursor sticky-dot">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </a>
+              </div>
+            </div>
+            <div class="blog-card">
+              <a href="./article.html" class="blog-card_image sticky-cursor sticky-dot">
+                <img src="./img/f9b828dbeb6102e6509a2677a8fbb9fa.png" alt="">
+              </a>
+              <div class="blog-card_content">
+                <div class="card-tag tags">
+                  <ul>
+                    <li class="color-green"><a class="sticky-cursor" href="./blog-category.html">Announcements</a></li>
+                  </ul>
+                </div>
+                <div class="card-date">
+                  September 15, 2023
+                </div>
+                <a href="./article.html" class="card-text sticky-cursor sticky-dot">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="sBlog__articles-more">
+            <button type="button" class="button button-simple sticky-cursor">
+              <span>Show more</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"name": "blockReward",
+	"title": "Block reward",
+	"description": "Block reward",
+	"category": "dollet",
+	"icon": "tickets-alt",
+	"keywords": ["Block reward", "Block reward"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/reward/reward.php"
+	}
+}

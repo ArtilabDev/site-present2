@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('components/_head.html')
+	@@include('components/_head-links.html')
+</head>
+
+<body class="page-strategy hideAll">
+
+<div class="page-wrapper no-banner">
+	@@include('components/_header.html')
+
+	@@include('components/section/_strategy.html')
+
+	<section class="banner animated">
+		<div class="container">
+			<div class="banner__wrap">
+				<div class="banner__content">
+					<div class="banner__content-title">
+						Did you like the Strategy?
+					</div>
+					<div class="banner__content-text">
+						<p>Let Dollet be your trusted companion on DeFi journey,
+							ensuring your assets are always safe and secure</p>
+					</div>
+					<div class="banner__content-buttons">
+						<a href="#" class="sticky-cursor">
+							<img src="img/app_store.svg" alt="app store icon">
+						</a>
+						<a href="#" class="sticky-cursor">
+							<img src="img/play_market.svg"
+							     alt="play market icon">
+						</a>
+					</div>
+				</div>
+
+				<div class="banner__app">
+					<picture>
+						<source media="(min-width: 1024px)"
+						        srcset="img/pic__strategies.png">
+						<source media="(min-width: 768px)"
+						        srcset="img/pic__strategies.png">
+						<img src="img/pic__strategies.png" alt="pic application">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@@include('components/section/_faq.html')
+
+	@@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"name": "blockIframe",
+	"title": "Block iframe",
+	"description": "Block iframe",
+	"category": "dollet",
+	"icon": "cover-image",
+	"keywords": ["Block iframe", "Block iframe"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/iframe/iframe.php"
+	}
+}

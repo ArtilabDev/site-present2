@@ -1,0 +1,12 @@
+{
+	"name": "blockBanner",
+	"title": "Block banner",
+	"description": "Block banner",
+	"category": "dollet",
+	"icon": "admin-home",
+	"keywords": ["Block banner", "Block banner"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/banner/banner.php"
+	}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('components/_head.html')
+  @@include('components/_head-links.html')
+</head>
+
+<body class="page-strategy hideAll">
+
+<div class="page-wrapper no-banner">
+  @@include('components/_header.html')
+
+  <section class="question">
+    <div class="container">
+      <div class="question__wrap">
+        <h2 class="question__title">Have questions?</h2>
+        <div class="question__search">
+          <input type="text" class="question__search_input" placeholder="Find the answer">
+
+          <div class="question__search_result">
+
+          </div>
+
+          <span class="close-search"></span>
+        </div>
+        <div class="question__info">
+          <a href="#" class="info-block sticky-cursor sticky-dot">
+            <div class="info-block_icon">
+              <img src="./img/icon/icon_qa.svg" alt="question icon">
+            </div>
+            <div class="info-block_title">
+              FAQ
+            </div>
+            <div class="info-block_text">
+              Visit the FAQ page to find the answers to your questions.
+            </div>
+          </a>
+          <a href="#" class="info-block sticky-cursor sticky-dot">
+            <div class="info-block_icon">
+              <img src="./img/icon/icon__send.svg" alt="question icon">
+            </div>
+            <div class="info-block_title">
+              Send your request
+            </div>
+            <div class="info-block_text">
+              You can send us a request or report a bug.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

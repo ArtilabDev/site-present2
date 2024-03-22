@@ -1,0 +1,74 @@
+.popup {
+  &-cookies {
+    display: none;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    border-radius: 24px;
+    background: $bg-black;
+    width: 660px;
+    padding: 32px;
+    z-index: 99;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    @media (min-width: 2000px) {
+      left: calc((100% - 1920px) / 2);
+    }
+    @media (max-width: $ipad) {
+      width: calc(100% - 40px);
+    }
+    @media (max-width: $phone-wide) {
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      border-radius: 24px 24px 0 0;
+      border-bottom: 0;
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 32px;
+    @media (max-width: $phone-wide) {
+      flex-wrap: wrap;
+    }
+
+    &_info {
+      @include fs-16();
+
+      a {
+        color: $color-green;
+        text-decoration: underline;
+      }
+    }
+
+    &_buttons {
+      display: inline-flex;
+      flex-flow: column;
+      gap: 16px;
+      width: 300px;
+      @media (max-width: $phone-wide) {
+        flex-flow: wrap;
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+        padding: 20px 40px;
+        @media (max-width: $phone-wide) {
+          padding: 16px 32px;
+        }
+
+        span {
+          @include fs-20();
+          @include f-w(600);
+          @media (max-width: $phone-wide) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

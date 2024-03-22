@@ -1,0 +1,12 @@
+{
+	"name": "blockCampaign",
+	"title": "Block campaign",
+	"description": "Block campaign",
+	"category": "dollet",
+	"icon": "bank",
+	"keywords": ["Block campaign", "Block campaign"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/campaign/campaign.php"
+	}
+}

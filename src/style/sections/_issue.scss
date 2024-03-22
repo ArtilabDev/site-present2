@@ -1,0 +1,104 @@
+.issue {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 60px 0 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $phone-wide) {
+    padding: 60px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: column;
+    gap: 60px;
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+
+    &_title {
+      @include fs-32();
+    }
+
+    &_buttons {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+      justify-content: center;
+      @media (max-width: $phone-middle) {
+        flex-flow: column;
+      }
+
+      button {
+        padding: 20px 40px;
+        @media (max-width: $phone-wide) {
+          padding: 16px 32px;
+        }
+        @media (max-width: $phone-middle) {
+         width: 100%;
+        }
+
+        span {
+          @include f-w(700);
+          pointer-events: none;
+        }
+
+        &.active {
+          background-color: $bg-green;
+
+          span {
+            color: $bg-black;
+          }
+        }
+      }
+    }
+  }
+
+  &__forms {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .feedback-panel {
+      &_form {
+        position: relative;
+        opacity: 1;
+        pointer-events: auto;
+        bottom: 0;
+        width: 600px;
+
+        @media (max-width: $phone-wide) {
+          width: 100%;
+          padding: 0;
+          border: 0;
+        }
+
+        .success-form-timer {
+          margin-top: 20px;
+          font-size: 12px;
+          color: $bg-green;
+
+          span {
+            font-size: 14px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &_fields {
+        height: auto;
+        max-height: max-content;
+        padding-right: 0;
+        overflow: hidden;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"name": "blockAbout",
+	"title": "Block about",
+	"description": "Block about",
+	"category": "dollet",
+	"icon": "clipboard",
+	"keywords": ["about", "block about"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/about/about.php"
+	}
+}

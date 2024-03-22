@@ -1,0 +1,24 @@
+.faq-block {
+  width: 100%;
+  @include block-margin-top-bot();
+  
+  &__wrap {
+    padding: 100px 100px 76px 100px;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: $bg-black;
+    @media (max-width: $desktop) {
+      padding: 80px 80px 56px 80px;
+    }
+    @media (max-width: $ipad) {
+      padding: 60px 60px 36px 60px;
+    }
+    @media (max-width: $tablet) {
+      padding: 0;
+      border: 0;
+    }
+  }
+}

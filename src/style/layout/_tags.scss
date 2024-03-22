@@ -1,0 +1,61 @@
+.tags {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    li {
+      a {
+        display: inline-block;
+        font-size: 14px;
+        @include l-h();
+        @include f-w(400);
+        color: $color-white;
+        border: 1px solid $color-white;
+        border-radius: 24px;
+        padding: 8px 16px;
+        @media (max-width: $desktop) {
+          font-size: 13px;
+        }
+        @media (max-width: $ipad) {
+          font-size: 14px;
+        }
+      }
+
+      &.color-white {
+        a {
+          color: $color-white;
+          border: 1px solid $color-white;
+        }
+      }
+
+      &.color-green {
+        a {
+          color: $color-green;
+          border: 1px solid $color-green;
+        }
+      }
+
+      &.color-violet {
+        a {
+          color: $color-violet;
+          border: 1px solid $color-violet;
+        }
+      }
+
+      &.color-yellow {
+        a {
+          color: $color-yellow;
+          border: 1px solid $color-yellow;
+        }
+      }
+
+      &.color-red {
+        a {
+          color: $color-red;
+          border: 1px solid $color-red;
+        }
+      }
+    }
+  }
+}

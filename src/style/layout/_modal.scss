@@ -1,0 +1,302 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  outline: 0;
+  transform: translateY(100%) scale(.1, 1);
+  z-index: 101;
+  transition: opacity .5s, visibility .5s, transform .5s .1s;
+  @media (max-width: $tablet) {
+    padding: 0 50px;
+  }
+  @media (max-width: $phone-wide) {
+    padding: 0;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    margin: 0 auto;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 670px;
+    min-height: calc(92.5%);
+    display: flex;
+    align-items: center;
+    margin: 1.75rem auto;
+    padding: 0;
+    @media (max-width: $tablet) {
+      align-items: flex-end;
+      min-height: 100%;
+      margin: 0;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: $bg-black;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    gap: 32px;
+    @media (max-width: $tablet) {
+      border-radius: 40px 40px 0 0;
+    }
+    @media (max-width: $phone) {
+      gap: 24px;
+    }
+
+    #modal-terms & {
+      gap: 24px;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 24px;
+    height: 24px;
+    @media (max-width: $phone) {
+      right: 24px;
+      top: 24px;
+
+      #modal-terms & {
+        top: 32px;
+      }
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+    }
+
+    &::before {
+      right: 11px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      border-radius: 6px;
+      background-color: #a5a4a8;
+      transform: rotate(45deg);
+      @include transition();
+    }
+
+    &::after {
+      right: 11px;
+      top: 0;
+      width: 2px;
+      border-radius: 6px;
+      height: 100%;
+      background-color: #a5a4a8;
+      transform: rotate(-45deg);
+      @include transition();
+    }
+
+    &:hover {
+      &::before {
+        transform: rotate(225deg);
+        background-color: white;
+      }
+
+      &::after {
+        transform: rotate(-225deg);
+        background-color: white;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 88px 32px 0;
+    margin-bottom: 12px;
+    @media (max-width: $tablet) {
+      gap: 20px;
+    }
+    @media (max-width: $phone-wide) {
+      gap: 16px;
+      padding: 88px 32px 0;
+    }
+    @media (max-width: $phone) {
+      gap: 16px;
+      padding: 78px 24px 0;
+    }
+
+    #modal-terms & {
+      padding: 32px 32px 0;
+      margin-bottom: 0;
+      gap: 8px;
+      align-items: flex-start;
+      text-align: left;
+      @media (max-width: $phone) {
+        padding: 32px 24px 0;
+      }
+    }
+
+    &_title {
+      color: $color-white;
+      @include fs-40-title();
+      @include f-w(900);
+      @include l-h();
+
+      #modal-terms & {
+        font-size: 24px;
+      }
+    }
+
+    &_subtitle {
+      color: $color-white;
+      font-size: 16px;
+      @include f-w();
+      @include l-h(140%);
+      @media (max-width: $tablet) {
+        br {
+          display: none;
+        }
+      }
+
+      #modal-terms & {
+        @include f-w(400);
+        font-size: 14px;
+        color: $color-green;
+      }
+    }
+  }
+
+  &-content {
+    padding: 0 32px;
+    @media (max-width: $phone) {
+      padding: 0 16px;
+    }
+
+    #modal-terms & {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 16px;
+      padding: 16px 16px 16px 0;
+      font-size: 14px;
+      opacity: .8;
+      @include f-w(400);
+      @include l-h(140%);
+      height: calc(100vh - 340px);
+      overflow-y: auto;
+      @media (min-width: $desktop) and (max-height: 500px) {
+        height: calc(100vh - 100px);
+      }
+      @media (max-width: $desktop) and (orientation: landscape) {
+        height: calc(100vh - 100px);
+      }
+      @media (max-width: $ipad) and (orientation: portrait) {
+        height: calc(100vh - 400px);
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      ul, ol {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+      @media (max-width: $tablet) {
+        gap: 20px;
+      }
+      @media (max-width: $phone-wide) {
+        gap: 16px;
+      }
+      @media (max-width: 350px) {
+        gap: 8px;
+      }
+
+      a {
+        border-radius: 12px;
+        width: 217px;
+        @media (max-width: $ipad) {
+          border-radius: 0;
+        }
+        @media (max-width: $phone-wide) {
+          width: 180px;
+        }
+        @media (max-width: $phone) {
+          width: 160px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+  }
+
+  &-confirm {
+    padding: 24px 0 32px;
+    width: 100%;
+
+    .button {
+      padding: 16px 32px;
+      width: 100%;
+    }
+  }
+
+  &-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.open-modal {
+  overflow: hidden;
+
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: opacity .5s .1s, visibility .5s .1s, transform .5s;
+
+    &::before {
+      opacity: 1;
+      transition: opacity .8s .5s;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.wrap.custom-page {
+    margin: 20px;
+}
+
+.wrap.custom-page h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wrap.custom-page p.admin-p {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#user-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#pagination {
+    margin-top: 20px;
+}
+
+.page-number {
+    background-color: #0073aa;
+    color: #fff;
+    border: 1px solid #0073aa;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.page-number:hover {
+    background-color: #005689;
+    border-color: #005689;
+}
+
+.page-number.active {
+    background-color: #005689;
+    border-color: #005689;
+    color: #fff;
+}
+
+
+ .widefat.custom-admin-table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 20px;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
+
+.widefat.custom-admin-table th,
+.widefat.custom-admin-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+.widefat.custom-admin-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+.widefat.custom-admin-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.widefat.custom-admin-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+

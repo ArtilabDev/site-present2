@@ -1,0 +1,12 @@
+{
+	"name": "blockchapterhead",
+	"title": "Block chapter head",
+	"description": "Block chapter head",
+	"category": "dollet",
+	"icon": "superhero",
+	"keywords": ["Block chapter head", "head"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/chapter-head/chapter-head.php"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "blockPresentationAnimation",
+	"title": "Block presentation-animation",
+	"description": "Block presentation-animation",
+	"category": "dollet",
+	"icon": "buddicons-topics",
+	"keywords": ["Block wallet", "presentation-animation"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/presentation-animation/presentation-animation.php"
+	}
+}

@@ -1,0 +1,220 @@
+.participate {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__wrap {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    gap: 44px;
+    align-items: center;
+  }
+
+  &-slider {
+    width: 100%;
+
+    .swiper-wrapper {
+      overflow: visible;
+    }
+  }
+
+  &-slide {
+    display: inline-flex;
+    flex-flow: column;
+    gap: 24px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    @media (max-width: 340px) {
+      width: 270px;
+    }
+
+    .in-view & {
+      @for $i from 1 through 20 {
+        &:nth-of-type(#{$i}n) {
+          .participate-slide__icon {
+            &::after {
+              animation: width-line-vector .4s $i * .4s linear forwards;
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-flow: column;
+      gap: 8px;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-end;
+      order: 0;
+      z-index: 4;
+
+      .slide-numb {
+        color: $color-green;
+        font-size: 44px;
+        @include f-w(600);
+        @include l-h();
+      }
+
+      .slide-title {
+        font-size: 24px;
+        @include f-w(600);
+        @include l-h(140%);
+      }
+
+      .slide-text {
+        font-size: 14px;
+        @include f-w(400);
+        @include l-h(140%);
+      }
+    }
+
+    &__icon {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+      position: relative;
+      z-index: 3;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: -75px;
+        border-radius: 50%;
+        width: calc(100% + 2px);
+        height: 300px;
+        z-index: 1;
+        background-image: url("../img/line-vector.svg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 302px 153px;
+        @media (max-width: 340px) {
+          background-size: 272px 166px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: -75px;
+        width: calc(100% + 4px);
+        height: 300px;
+        background: $bg-black;
+        z-index: 2;
+      }
+
+      &-wrap {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+      }
+
+      img {
+        max-width: 100px;
+        max-height: 100px;
+        height: 100%;
+        width: auto;
+
+      }
+    }
+
+    &:nth-of-type(2n+2) {
+      .participate-slide__icon {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+
+      .participate-slide__content {
+        order: 1;
+        justify-content: flex-start;
+      }
+
+      .participate-slide__icon {
+        order: 0;
+      }
+    }
+
+    &:nth-of-type(3n+1) {
+      .participate-slide__icon-wrap {
+        background: linear-gradient(90deg, #6DFFD5 0%, #CD57FF 100%);
+      }
+    }
+
+    &:nth-of-type(3n+2) {
+      .participate-slide__icon-wrap {
+        background: linear-gradient(90deg, #CD57FF 0%, #FFFCBE 100%);
+      }
+    }
+
+    &:nth-of-type(3n+3) {
+      .participate-slide__icon-wrap {
+        background: linear-gradient(90deg, #FFFCBE 0%, #6DFFD5 100%);
+      }
+    }
+  }
+
+  &.crypto-bloom {
+    .participate {
+      &-slide {
+        &__icon {
+
+          &-wrap {
+            background: transparent;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        &__content {
+          .slide-numb, .slide-title {
+            @include f-w(900);
+          }
+        }
+
+        &:nth-of-type(3n+1) {
+          .slide-numb {
+            color: $color-yellow_2;
+          }
+        }
+
+        &:nth-of-type(3n+2) {
+          .slide-numb {
+            color: $color-pink;
+          }
+        }
+
+        &:nth-of-type(3n+3) {
+          .slide-numb {
+            color: $color-green_2;
+          }
+        }
+
+        &:nth-of-type(2n+1) {
+          .slide-numb {
+            color: $color-green_2;
+          }
+        }
+      }
+    }
+  }
+}

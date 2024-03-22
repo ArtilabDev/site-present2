@@ -1,0 +1,158 @@
+.campaign {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    border-radius: 40px;
+    border: 1px solid #38373f;
+    background: $bg-green_2;
+    @media (max-width: $desktop-wide) {
+      padding: 40px 70px;
+    }
+    @media (max-width: $desktop) {
+      padding: 40px 60px;
+    }
+    @media (max-width: $ipad) {
+      flex-wrap: wrap;
+      flex-flow: column;
+      justify-content: center;
+      gap: 44px;
+      padding: 40px 100px;
+    }
+    @media (max-width: $phone-wide) {
+      padding: 32px;
+      border-right: 0;
+      border-left: 0;
+      width: calc(100% + 64px);
+      margin: 0 -32px;
+    }
+    @media (max-width: $phone) {
+      width: calc(100% + 48px);
+      margin: 0 -24px;
+    }
+  }
+
+  &__image {
+    width: 430px;
+    height: auto;
+    @media (max-width: $desktop-wide) {
+      width: 360px;
+    }
+    @media (max-width: $desktop) {
+      width: 340px;
+    }
+    @media (max-width: $ipad) {
+      width: 460px;
+      text-align: center;
+      order: 1;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      max-width: 375px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__info {
+    width: calc(100% - 474px);
+    display: inline-flex;
+    flex-flow: column;
+    gap: 32px;
+    @media (max-width: $desktop-wide) {
+      width: calc(100% - 404px);
+    }
+    @media (max-width: $desktop) {
+      width: calc(100% - 384px);
+    }
+    @media (max-width: $ipad) {
+      width: 100%;
+      order: 0;
+      align-items: center;
+      text-align: center;
+    }
+    @media (max-width: $phone-wide) {
+      gap: 24px;
+    }
+
+    &_title {
+      @include f-w(900);
+      color: $color-black;
+    }
+
+    &_text {
+      @include f-w(500);
+      @include l-h(140%);
+      font-size: 16px;
+      color: $color-black;
+    }
+
+    &_button {
+      .button {
+        padding: 20px 40px;
+        border: 1px solid $bg-black;
+        @media (max-width: $phone-wide) {
+          padding: 16px 32px;
+        }
+
+        &.button-simple {
+          svg {
+            fill: $bg-black;
+          }
+        }
+
+        span {
+          @include f-w(700);
+          color: $color-black;
+        }
+
+        &:hover {
+          background: $bg-black;
+
+          svg {
+            fill: $color-green;
+          }
+
+          span {
+            color: $color-green;
+          }
+        }
+      }
+    }
+  }
+
+  &.crypto-bloom {
+    .campaign {
+      &__wrap {
+        background: $bg-green_2;
+        flex-direction: row-reverse;
+        @media (max-width: $ipad) {
+          flex-direction: column;
+        }
+      }
+
+      &__info_text {
+        p {
+          @include fs-20();
+          @include f-w(500);
+        }
+      }
+
+      &__info_button {
+        span {
+          @include f-w(700);
+        }
+      }
+    }
+  }
+}

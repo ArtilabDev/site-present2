@@ -1,0 +1,69 @@
+.comming-soon {
+  width: 100%;
+  height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  @media (max-width: $tablet) {
+    height: 100%;
+    margin: 100px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: -30%;
+    margin: 0 auto;
+    top: calc(50% - 488px);
+    width: 800px;
+    height: 800px;
+    background-image: url("./../img/circle_blur.webp");
+    background-size: cover;
+    @media (max-width: $desktop-wide) {
+      width: 700px;
+      height: 700px;
+      top: calc(50% - 428px);
+    }
+    @media (max-width: $ipad) {
+      left: 0;
+      right: 0;
+    }
+    @media (max-width: $tablet) {
+      width: 400px;
+      height: 400px;
+      top: calc(50% - 200px);
+    }
+  }
+
+  &_wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    color: rgba(235, 255, 249, 0.1);
+    font-size: 88px;
+    font-weight: 900;
+    line-height: 100%;
+
+    @media (max-width: $tablet) {
+      font-size: 52px;
+    }
+  }
+
+  .button {
+    padding: 20px 40px;
+    @media (max-width: $phone-wide) {
+      padding: 16px 32px;
+    }
+  }
+}

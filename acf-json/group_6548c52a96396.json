@@ -1,0 +1,70 @@
+{
+    "key": "group_6548c52a96396",
+    "title": "Add class",
+    "fields": [
+        {
+            "key": "field_6548c52a3faf4",
+            "label": "Custom class",
+            "name": "custom_class",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-banner": "no-banner",
+                "page-defi": "page-defi",
+                "page-about": "page-about",
+                "page-faq": "page-faq",
+                "page-blog": "page-blog",
+                "page-privacy": "page-privacy",
+                "page-download": "page-download"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/tpl-blog.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/tpl-chapter-finished.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709284951
+}

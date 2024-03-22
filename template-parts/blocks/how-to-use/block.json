@@ -1,0 +1,12 @@
+{
+	"name": "blockHowToUse",
+	"title": "Block how-to-use",
+	"description": "Block how-to-use",
+	"category": "dollet",
+	"icon": "clipboard",
+	"keywords": ["Block how-to-use", "how-to-use"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/how-to-use/how-to-use.php"
+	}
+}

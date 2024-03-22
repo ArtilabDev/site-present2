@@ -1,0 +1,24 @@
+.d-ol {
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+  margin: 16px 0;
+  list-style: none;
+  padding-left: 28px;
+  counter-reset: number;
+
+  & > li {
+    position: relative;
+    @include fs-16();
+    @include f-w(400);
+    @include l-h(140%);
+
+    &::before {
+      counter-increment: number;
+      content: counter(number) ".";
+      position: absolute;
+      left: -28px;
+      top: 0;
+    }
+  }
+}

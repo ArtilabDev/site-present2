@@ -1,0 +1,12 @@
+{
+	"name": "blockSupport",
+	"title": "Block support",
+	"description": "Block support",
+	"category": "dollet",
+	"icon": "editor-help",
+	"keywords": ["Block support", "support"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/support/support.php"
+	}
+}

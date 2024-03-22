@@ -1,0 +1,12 @@
+{
+	"name": "blockCoomingSoon",
+	"title": "Block Cooming Soon",
+	"description": "Block Cooming Soon",
+	"category": "dollet",
+	"icon": "clock",
+	"keywords": ["Block cooming soon", "cooming soon"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/cooming-soon/cooming-soon.php"
+	}
+}

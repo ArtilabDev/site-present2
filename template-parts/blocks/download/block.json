@@ -1,0 +1,12 @@
+{
+	"name": "blockDownload",
+	"title": "Block download",
+	"description": "Block download",
+	"category": "dollet",
+	"icon": "download",
+	"keywords": ["Block download", "Block download"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/download/download.php"
+	}
+}

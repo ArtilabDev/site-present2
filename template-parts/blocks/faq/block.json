@@ -1,0 +1,12 @@
+{
+	"name": "blockFaq",
+	"title": "Block faq",
+	"description": "Block faq",
+	"category": "dollet",
+	"icon": "format-status",
+	"keywords": ["Block faq", "faq"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/faq/faq.php"
+	}
+}

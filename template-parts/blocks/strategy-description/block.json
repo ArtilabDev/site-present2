@@ -1,0 +1,12 @@
+{
+	"name": "blockStrategyDescription",
+	"title": "Block strategy description",
+	"description": "Block strategy description",
+	"category": "dollet",
+	"icon": "editor-paste-word",
+	"keywords": ["Block strategy-description", "strategy-description"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/strategy-description/strategy-description.php"
+	}
+}

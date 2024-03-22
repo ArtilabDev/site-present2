@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('components/_head.html')
+	@@include('components/_head-links.html')
+</head>
+
+<body class="hideAll">
+
+<div class="page-wrapper no-banner">
+	@@include('components/_header.html')
+
+	<div class="block-404">
+		<div class="container">
+			<div class="block-404__wrap">
+
+				<div class="block-404__code"
+						 data-path="models/404_appear.json"
+						 data-path-second="models/404_cycle.json"
+						 id="animated-404"></div>
+
+				<div class="block-404__text">
+					The page is hiding from us. <br>
+					But we're on the search!
+				</div>
+				<div class="block-404__button">
+					<a href="/" class="button button-simple with-arrow sticky-cursor">
+						<span>Go to Homepage</span>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon">
+							<use xlink:href="./img/_set.svg#icon-arrow"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

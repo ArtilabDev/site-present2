@@ -1,0 +1,144 @@
+.audit {
+  width: 100%;
+  margin: 160px 0 200px;
+  @media (max-width: $desktop-wide) {
+    margin: 130px 0 160px;
+  }
+  @media (max-width: $ipad) {
+    margin: 130px 0 200px;
+  }
+  @media (max-width: $tablet) {
+    margin: 130px 0 100px;
+  }
+  @media (max-width: $phone-wide) {
+    margin: 130px 0 60px;
+  }
+  
+  &__wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  &__content {
+    width: 610px;
+    display: inline-flex;
+    gap: 60px;
+    flex-flow: column;
+    @media (max-width: $desktop-wide) {
+      width: 520px;
+      gap: 50px;
+    }
+    @media (max-width: $ipad) {
+      gap: 60px;
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      gap: 40px;
+    }
+    @media (max-width: $phone-wide) {
+      gap: 20px;
+    }
+    
+    h2 {
+      @media (max-width: $tablet) {
+        width: 80%;
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: $phone) {
+        width: 90%;
+      }
+    }
+    
+    &_items {
+      display: flex;
+      gap: 20px;
+      @media (max-width: $ipad) {
+        justify-content: center;
+      }
+      
+      .audit-item {
+        width: 290px;
+        height: 290px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 24px;
+        padding: 60px 40px;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(109, 255, 213, 0.00) 0%, rgba(109, 255, 213, 0.04) 100%);
+        @include transition();
+        @media (max-width: $wide-screen) {
+          width: 270px;
+          height: 270px;
+        }
+        @media (max-width: $desktop-wide) {
+          width: 250px;
+          height: 250px;
+        }
+        @media (max-width: $desktop) {
+          width: 230px;
+          height: 230px;
+        }
+        @media (max-width: $ipad) {
+          width: 290px;
+          height: 290px;
+        }
+        @media (max-width: $tablet) {
+          width: 50%;
+          height: 200px;
+          padding: 40px 30px;
+        }
+        @media (max-width: $phone-wide) {
+          height: 147px;
+        }
+        
+        &:nth-of-type(2) {
+          margin-top: 60px;
+          @media (max-width: $ipad) {
+            margin-top: 40px;
+          }
+          @media (max-width: $phone-wide) {
+            margin-top: 32px;
+          }
+        }
+        
+        //&:hover {
+        //  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.24);
+        //}
+        
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  
+  &__shield {
+    position: absolute;
+    right: -78px;
+    top: 0;
+    width: 684px;
+    height: 550px;
+    @media (max-width: $wide-screen) {
+      width: 600px;
+      height: 482px;
+      right: -70px;
+    }
+    @media (max-width: $desktop-wide) {
+      width: 550px;
+      height: 441px;
+    }
+    @media (max-width: $ipad) {
+      display: none;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

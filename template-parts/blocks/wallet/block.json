@@ -1,0 +1,12 @@
+{
+	"name": "blockWallet",
+	"title": "Block wallet",
+	"description": "Block wallet",
+	"category": "dollet",
+	"icon": "cart",
+	"keywords": ["Block wallet", "wallet"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/wallet/wallet.php"
+	}
+}

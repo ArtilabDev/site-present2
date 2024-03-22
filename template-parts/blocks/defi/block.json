@@ -1,0 +1,12 @@
+{
+	"name": "blockDeFi",
+	"title": "Block DeFi",
+	"description": "Block DeFi",
+	"category": "dollet",
+	"icon": "money-alt",
+	"keywords": ["Block DeFi", "DeFi"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/defi/defi.php"
+	}
+}

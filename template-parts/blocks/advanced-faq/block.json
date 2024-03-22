@@ -1,0 +1,12 @@
+{
+	"name": "blockAdvancedFaq",
+	"title": "Block advanced faq",
+	"description": "Block advanced faq",
+	"category": "dollet",
+	"icon": "align-left",
+	"keywords": ["Block advanced faq", "advanced faq"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/advanced-faq/advanced-faq.php"
+	}
+}

@@ -1,0 +1,32 @@
+.d-ul {
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+  margin: 16px 0;
+  list-style: none;
+  padding-left: 30px;
+
+  li {
+    position: relative;
+    @include fs-16();
+    @include f-w(400);
+    @include l-h(140%);
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $bg-white;
+      position: absolute;
+      left: -24px;
+      top: 8px;
+      @media (max-width: $desktop-wide) {
+        top: 6px;
+      }
+      @media (max-width: $phone-wide) {
+        top: 7px;
+      }
+    }
+  }
+}

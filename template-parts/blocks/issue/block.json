@@ -1,0 +1,12 @@
+{
+	"name": "block-issue",
+	"title": "Block issue",
+	"description": "Block issue",
+	"category": "dollet",
+	"icon": "admin-site-alt3",
+	"keywords": ["Block issue", "Block issue"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/issue/issue.php"
+	}
+}

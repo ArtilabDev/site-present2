@@ -1,0 +1,12 @@
+{
+	"name": "blockParticipate",
+	"title": "Block participate",
+	"description": "Block participate",
+	"category": "dollet",
+	"icon": "games",
+	"keywords": ["Block participate", "Block participate"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/participate/participate.php"
+	}
+}

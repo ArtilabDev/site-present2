@@ -1,0 +1,12 @@
+{
+	"name": "blockStarted",
+	"title": "Block Started",
+	"description": "Block Started",
+	"category": "dollet",
+	"icon": "align-left",
+	"keywords": ["Block started", "started"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/started/started.php"
+	}
+}

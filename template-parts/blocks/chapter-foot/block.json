@@ -1,0 +1,12 @@
+{
+	"name": "blockchapterfoot",
+	"title": "Block chapter foot",
+	"description": "Block chapter foot",
+	"category": "dollet",
+	"icon": "text",
+	"keywords": ["Block chapter foot", "foot"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/chapter-foot/chapter-foot.php"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "blockTeam",
+	"title": "Block Team",
+	"description": "Block Team",
+	"category": "dollet",
+	"icon": "universal-access",
+	"keywords": ["Block team", "team"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/team/team.php"
+	}
+}

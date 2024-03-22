@@ -1,0 +1,241 @@
+.footer {
+  width: 100%;
+  padding: 52px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  
+  &__inner {
+    display: flex;
+    width: 100%;
+    gap: 64px;
+    @media (max-width: $desktop-wide) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $ipad) {
+      gap: 44px 64px;
+    }
+    @media (max-width: $phone-middle) {
+      gap: 44px;
+    }
+  }
+  
+  &__block {
+    width: 100%;
+    @media (max-width: $desktop-wide) {
+      width: calc(33.333% - 48px);
+      
+      &:nth-of-type(2) {
+        width: 100%;
+        order: 1;
+      }
+      
+      &:nth-of-type(3), &:nth-of-type(4) {
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: $ipad) {
+      width: calc(50% - 32px);
+      
+      &:nth-of-type(2) {
+        width: calc(50% - 32px);
+        order: 0;
+      }
+      
+      &:nth-of-type(3), &:nth-of-type(4) {
+        text-align: left;
+      }
+    }
+    @media (max-width: $phone-middle) {
+      width: 100%;
+  
+      &:nth-of-type(2) {
+        width: 100%;
+      }
+    }
+    
+    &-logo {
+      margin-bottom: 28px;
+      
+      img {
+        width: 94px;
+        height: auto;
+      }
+    }
+    
+    &-social {
+      width: 100%;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      
+      a {
+        width: 32px;
+        height: 32px;
+        border-radius: 100px;
+        background: rgba(235, 255, 249, 0.08);
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        
+        &:hover {
+          animation: pulseShadow 2s linear infinite;
+        }
+        
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    
+    &-info {
+      &-links {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+      
+      a {
+        color: #a3a2a6;
+        font-size: 12px;
+        @include l-h();
+        @include f-w();
+        position: relative;
+        @include transition();
+        
+        &::after {
+          content: '•';
+          color: #a3a2a6;
+          margin-left: 12px;
+          padding-right: 12px;
+          transition: none;
+          pointer-events: none;
+        }
+        
+        &:nth-last-child(1) {
+          &::after {
+            content: none;
+          }
+        }
+        
+        &:hover {
+          color: $color-green;
+        }
+      }
+      
+      span {
+        color: $color-white;
+        font-size: 12px;
+        @include l-h();
+        @include f-w();
+        opacity: 0.6;
+      }
+    }
+    
+    &-caption {
+      color: $color-white;
+      @include fs-20();
+      @include f-w(600);
+      @include l-h();
+      margin-bottom: 20px;
+    }
+    
+    &-text {
+      color: $color-white;
+      font-size: 14px;
+      @include f-w();
+      @include l-h(140%);
+      margin-bottom: 14px;
+    }
+    
+    &-link {
+      position: relative;
+      margin-bottom: 14px;
+      
+      a {
+        font-size: 14px;
+        @include f-w(500);
+        @include l-h();
+        color: $color-green;
+        padding-left: 28px;
+        @include transition();
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 11px);
+        width: 22px;
+        height: 22px;
+        background-size: cover;
+      }
+      
+      &.mail {
+        &::before {
+          background-image: url("./../img/icon/icon__mail.svg");
+        }
+      }
+      
+      &.chatBot {
+        &::before {
+          background-image: url("./../img/icon/icon__chatbot.svg");
+        }
+      }
+    }
+    
+    &-menu {
+      width: 100%;
+      
+      ul {
+        display: flex;
+        gap: 8px;
+        flex-flow: column;
+        @media (max-width: $ipad) {
+          gap: 12px;
+        }
+  
+        li {
+          a {
+            font-size: 14px;
+            @include f-w();
+            @include l-h();
+            color: $color-white;
+            opacity: .6;
+            @include transition();
+            
+            &:hover {
+              color: $color-green;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    @media (max-width: $ipad) {
+      margin-top: 32px;
+    }
+
+    a {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      gap: 8px;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $color-white;
+      opacity: .6;
+    }
+  }
+}

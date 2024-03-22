@@ -1,0 +1,12 @@
+{
+	"name": "blockBenefits",
+	"title": "Block benefits",
+	"description": "Block benefits",
+	"category": "dollet",
+	"icon": "awards",
+	"keywords": ["Block benefits", "benefits"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/benefits/benefits.php"
+	}
+}

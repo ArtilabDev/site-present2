@@ -1,0 +1,12 @@
+{
+	"name": "blockReferralBanner",
+	"title": "Block referral banner",
+	"description": "Block referral banner",
+	"category": "dollet",
+	"icon": "admin-multisite",
+	"keywords": ["Block referral banner", "Block banner"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/referral-banner/referral-banner.php"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "blockPrivacy",
+	"title": "Block Privacy",
+	"description": "Block Privacy",
+	"category": "dollet",
+	"icon": "info",
+	"keywords": ["Block privacy", "privacy"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/privacy/privacy.php"
+	}
+}

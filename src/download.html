@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('components/_head.html')
+	@@include('components/_head-links.html')
+</head>
+
+<body>
+
+<div class="page-wrapper">
+	@@include('components/_header.html')
+
+	<section class="apex animated preload">
+
+		<div class="apex__image">
+			<picture>
+				<source media="(min-width: 768px)"
+				        srcset="./img/pic__download.png">
+				<img src="./img/pic__download-tab.png" alt="pic application">
+			</picture>
+
+		</div>
+
+		<div class="container">
+			<div class="apex__wrap">
+				<h1>Download <br>
+					Dollet App</h1>
+
+				<span>Your multi-chain crypto wallet with a
+					bridge and DeFi functionality</span>
+
+				<div class="apex__buttons">
+					<a href="#" class="sticky-cursor">
+						<img src="img/app_store.svg" alt="">
+					</a>
+					<a href="#" class="sticky-cursor">
+						<img src="img/play_market.svg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@@include('components/section/_wallet.html')
+
+	@@include('components/section/_presentation.html')
+
+	@@include('components/section/_faq.html')
+
+	@@include('components/_footer.html')
+</div>
+
+@@include('components/_modal.html')
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"name": "block-partners",
+	"title": "Block partners",
+	"description": "Block partners",
+	"category": "dollet",
+	"icon": "pets",
+	"keywords": ["Block partners", "partners"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/partners/partners.php"
+	}
+}

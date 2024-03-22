@@ -1,0 +1,178 @@
+.ref-banner {
+  width: 100%;
+  min-height: 768px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  padding: 180px 0 90px;
+  @media (max-width: $desktop-wide) {
+    min-height: 600px;
+  }
+  @media (max-width: $ipad) {
+    padding: 400px 0 200px;
+    min-height: 768px;
+    max-height: 1024px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(29, 27, 37, .1) 0%, $bg-black 100%);
+      z-index: 1;
+    }
+  }
+  @media (max-width: $phone-wide) {
+    padding: 200px 0 80px;
+    min-height: 400px;
+    height: auto;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    animation: slideInLeft 1s ease-in-out forwards;
+    @media (max-width: $ipad) {
+      left: calc((100% - 2000px) / 2);
+      right: auto;
+    }
+    @media (max-width: $phone-wide) {
+      left: calc((100% - 1200px) / 2);
+    }
+
+    img {
+      object-position: top;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-flow: column;
+    gap: 24px;
+    max-width: 430px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: $ipad) {
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    h2 {
+      @include fs-32();
+    }
+
+    p {
+      @include l-h(140%);
+      margin-bottom: 0;
+
+      span {
+        color: $color-green;
+      }
+    }
+  }
+
+  &__buttons {
+    .button {
+      padding: 20px 40px;
+      @media (max-width: $phone-wide) {
+        padding: 16px 32px;
+      }
+    }
+  }
+
+  &.crypto-bloom {
+    border-bottom: 0;
+    max-height: 1080px;
+
+    @media (max-width: $ipad) {
+      padding: 400px 0;
+
+      &::before {
+        background: linear-gradient(180deg, rgba(29, 27, 37, .1) 0%, rgba(29, 27, 37, 0.60) 100%);
+      }
+    }
+    @media (max-width: $phone-wide) {
+      padding: 200px 0;
+    }
+
+    .ref-banner {
+      &__image {
+        width: 100%;
+        height: 100%;
+        max-width: 1920px;
+        left: 0;
+        margin: 0 auto;
+        animation: none;
+
+        @media (min-width: 1921px) {
+          &::before {
+            content: '';
+            position: absolute;
+            left: calc((-100% - 1918px) / 2);
+            top: 0;
+            width: 100%;
+            max-width: 1920px;
+            height: 100%;
+            background-size: cover;
+            background-position: top right;
+            background-image: url("../img/crypto-bloom-bg.webp");
+            transform: scaleX(-1);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: calc((-100% - 1918px) / 2);
+            top: 0;
+            width: 100%;
+            max-width: 1920px;
+            height: 100%;
+            background-size: cover;
+            background-position: top left;
+            background-image: url("../img/crypto-bloom-bg.webp");
+            transform: scaleX(-1);
+          }
+        }
+        @media (max-width: $ipad) {
+          left: 0
+        }
+        @media (max-width: $phone-wide) {
+          left: 0
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__wrap {
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      &__buttons {
+        .button {
+          span {
+            @include fs-20();
+            @include f-w(700);
+          }
+        }
+      }
+    }
+  }
+}

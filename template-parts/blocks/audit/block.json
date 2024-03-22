@@ -1,0 +1,12 @@
+{
+	"name": "blockAudit",
+	"title": "Block audit",
+	"description": "Block audit",
+	"category": "dollet",
+	"icon": "visibility",
+	"keywords": ["Block audit", "Block audit"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "template-parts/blocks/audit/audit.php"
+	}
+}

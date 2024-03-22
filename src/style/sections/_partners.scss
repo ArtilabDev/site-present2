@@ -1,0 +1,47 @@
+.partners {
+  width: 100%;
+  @include block-margin-top-bot();
+
+  &-slider {
+    margin-top: 60px;
+    @media (max-width: $phone-wide) {
+      margin-top: 24px;
+    }
+
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+
+      &:hover {
+        transition-timing-function: step-end;
+      }
+    }
+
+    .swiper-slide {
+      width: 300px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: $bg-black;
+      @media (max-width: $phone-wide) {
+        width: 200px;
+        height: 76px;
+        padding: 12px;
+        border-radius: 12px;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        max-height: 80px;
+        max-width: 100%;
+        @media (max-width: $phone-wide) {
+          max-height: 52px;
+        }
+      }
+    }
+  }
+}
